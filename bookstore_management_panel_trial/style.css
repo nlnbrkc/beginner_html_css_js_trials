@@ -1,0 +1,369 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+body {
+    line-height: 1.5;
+}
+
+#header_image {
+    margin: 15px;
+    height: 190px;
+    border: 9px solid rgb(22, 109, 33);
+    border-radius: 1.6em;
+}
+
+.container .bolum .icon {
+    width: 20px;
+    height: 20px;
+    padding-top: 10px;
+}
+
+a {
+    color: rgb(22, 109, 33);
+    text-decoration: none;
+}
+
+.container .row {
+    height: 123px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background-color: #e5ffe3;
+    flex-wrap: wrap;
+}
+
+.container .first_grid {
+    width: 420px;
+}
+
+.container .third_grid {
+    width: 420px;
+    display: inline-block;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    padding-left: 14px;
+}
+
+.container .image {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .bolum span {
+    margin: 7px;
+    padding-top: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.link {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#baslik1,
+#baslik2 {
+    padding-bottom: 25px;
+    text-shadow: 2px -2px rgb(65, 91, 92);
+    font: italic bold 37px/30px Georgia, serif;
+}
+
+#gecis {
+    height: 5px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.content span {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 25px;
+    font-style: oblique;
+}
+
+.content table {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+th,
+td {
+    border: 3px solid black;
+    padding: 7px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+table {
+    padding: 15px;
+}
+
+tr:nth-child(even) {
+    background-color: rgb(185, 236, 228);
+}
+
+th {
+    background-color: black;
+    color: white;
+    justify-content: center;
+}
+
+.content .newadmin {
+    margin: 20px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    display: inline-block;
+}
+
+.content .addorder {
+    margin: 20px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    display: inline-block;
+}
+
+.form {
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.chartrow {
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    display: flex;
+}
+
+#chartContainer1,
+#chartContainer2,
+#chartContainer3 {
+    height: 300px;
+    width: 450px;
+}
+
+.content {
+    width: 100%;
+    height: 1080px;
+    background-color: rgba(119, 184, 164, 0.8);
+    margin-top: 5px;
+    padding-top: 5px;
+}
+
+.harita img {
+    width: 875px;
+    margin-top: 30px;
+    margin-left: 325px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.content .tedarikci {
+    list-style-type: disc;
+}
+
+.content .tedarikci .list {
+    list-style-type: disc;
+    margin: 30px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.content .resim {
+    height: 150px;
+    margin: 10px;
+    margin-top: 25px;
+}
+
+.content .toptan {
+    display: flex;
+    justify-content: center;
+}
+
+.content .tedarikci span {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    margin-top: 10px;
+    font-style: normal;
+    width: 300px;
+}
+
+.content .satir1 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.content .satir2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: -450px;
+    padding: 10px;
+}
+
+.chart1 {
+    padding: 30px;
+}
+
+.chart2 {
+    padding: 30px;
+}
+
+.chart3 {
+    padding: 30px;
+}
+
+.chart4 {
+    padding: 30px;
+}

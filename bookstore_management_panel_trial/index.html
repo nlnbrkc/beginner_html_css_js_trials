@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <link href="style.css" rel="stylesheet">
+    <title>Parıltı Kitabevi</title>
+    <meta charset="UTF-8" />
+</head>
+
+<script>
+    window.onload = function() {
+
+        var chart = new CanvasJS.Chart("chartContainer1", {
+            animationEnabled: true,
+            theme: "light2", // "light1", "light2", "dark1", "dark2"
+            title: {
+                text: "Günlere Göre Mağaza Ziyaretçi Sayısı"
+            },
+            axisY: {
+                title: "Mağaza Doluluk Oranı",
+                suffix: "%"
+            },
+            axisX: {
+                title: "Günler"
+            },
+            data: [{
+                type: "column",
+                yValueFormatString: "#,##0.0#\"%\"",
+                dataPoints: [{
+                        label: "Pazartesi",
+                        y: 3.9
+                    }, {
+                        label: "Salı",
+                        y: 4.0
+                    }, {
+                        label: "Çarşamba",
+                        y: 5.00
+                    }, {
+                        label: "Perşembe",
+                        y: 4.1
+                    }, {
+                        label: "Cuma",
+                        y: 5.4
+                    }, {
+                        label: "Cumartesi",
+                        y: 6.1
+                    }, {
+                        label: "Pazar",
+                        y: 8.6
+                    }
+
+                ]
+            }]
+        });
+        chart.render();
+
+
+
+
+
+        var chart = new CanvasJS.Chart("chartContainer2", {
+            animationEnabled: true,
+            title: {
+                text: "En Çok Sipariş Edilen Kitap Türü (Ocak Ayı)",
+                horizontalAlign: "left"
+            },
+            data: [{
+                type: "doughnut",
+                startAngle: 60,
+                //innerRadius: 60,
+                indexLabelFontSize: 17,
+                indexLabel: "{label} - #percent%",
+                toolTipContent: "<b>{label}:</b> {y} (#percent%)",
+                dataPoints: [{
+                    y: 43,
+                    label: "Roman"
+                }, {
+                    y: 1,
+                    label: "Tarih"
+                }, {
+                    y: 9,
+                    label: "Ders Kitabı"
+                }, {
+                    y: 11,
+                    label: "Deneme"
+                }, {
+                    y: 15,
+                    label: "Kişisel Gelişim"
+                }, {
+                    y: 6,
+                    label: "Politik"
+                }]
+            }]
+        });
+        chart.render();
+
+
+
+        var chart = new CanvasJS.Chart("chartContainer3", {
+            animationEnabled: true,
+            theme: "light2",
+            title: {
+                text: "Aylara Göre Ortalama Satışlar"
+            },
+            data: [{
+                type: "line",
+                indexLabelFontSize: 16,
+                dataPoints: [{
+                    y: 450
+                }, {
+                    y: 414
+                }, {
+                    y: 520,
+                    indexLabel: "\u2191 highest",
+                    markerColor: "red",
+                    markerType: "triangle"
+                }, {
+                    y: 460
+                }, {
+                    y: 450
+                }, {
+                    y: 500
+                }, {
+                    y: 480
+                }, {
+                    y: 480
+                }, {
+                    y: 410,
+                    indexLabel: "\u2193 lowest",
+                    markerColor: "DarkSlateGrey",
+                    markerType: "cross"
+                }, {
+                    y: 500
+                }, {
+                    y: 480
+                }, {
+                    y: 510
+                }]
+            }]
+        });
+        chart.render();
+
+
+
+        var chart = new CanvasJS.Chart("chartContainer4", {
+            animationEnabled: true,
+            title: {
+                text: "Yıl İçinde Tedarikçilerimizin Aktif Olduğu Dönemler"
+            },
+            legend: {
+                horizontalAlign: "left"
+            },
+            data: [{
+                type: "bubble",
+                showInLegend: true,
+                legendText: "Size of Bubble Represents Population in Millions",
+                legendMarkerType: "circle",
+                legendMarkerColor: "grey",
+                toolTipContent: "<b>{name}</b><br/>Life Exp: {x} yrs<br/> Fertility Rate: {y}<br/> Population: {z}mn",
+                dataPoints: [{
+                    x: 78.7,
+                    y: 1.84,
+                    z: 320.896,
+                    name: "Ocak"
+                }, {
+                    x: 69.1,
+                    y: 2.44,
+                    z: 258.162,
+                    name: "Şubat"
+                }, {
+                    x: 74.7,
+                    y: 1.78,
+                    z: 225.962,
+                    name: "Mart"
+                }, {
+                    x: 76.9,
+                    y: 2.21,
+                    z: 125.890,
+                    name: "Nisan"
+                }, {
+                    x: 53,
+                    y: 5.59,
+                    z: 181.181,
+                    name: "Mayıs"
+                }, {
+                    x: 70.9,
+                    y: 1.75,
+                    z: 144.096,
+                    name: "Haziran"
+                }, {
+                    x: 83.8,
+                    y: 1.46,
+                    z: 127.141,
+                    name: "Temmuz"
+                }, {
+                    x: 82.5,
+                    y: 1.83,
+                    z: 23.789,
+                    name: "Ağustos"
+                }, {
+                    x: 71.3,
+                    y: 3.31,
+                    z: 93.778,
+                    name: "Eyül"
+                }, {
+                    x: 81.6,
+                    y: 1.81,
+                    z: 65.128,
+                    name: "Ekim"
+                }, {
+                    x: 62.1,
+                    y: 4.26,
+                    z: 47.236,
+                    name: "Kasım"
+                }, {
+                    x: 47.1,
+                    y: 4.88,
+                    z: 13.236,
+                    name: "Aralık"
+                }]
+            }]
+        });
+        chart.render();
+
+    }
+</script>
+
+
+
+
+<body>
+    <div class="container">
+        <div class="row">
+
+            <div class="first_grid">
+                <div id="baslik1">
+                    <span> PARILTI KİTABEVİ  </span>
+                </div>
+                <div class="link">
+                    <div class="bolum">
+                        <div class="image"><img class="icon" src="images/home.png"></div>
+                        <span class="span"> <a href="index.html"> Anasayfa </a> </span>
+                    </div>
+                    <div class="bolum">
+                        <div class="image"><img class="icon" src="images/adminsymbol.png"> </div>
+                        <span class="span"> <a href="adminlist.html">    Kullanıcı Listesi </a> </span>
+                    </div>
+
+                    <div class="bolum">
+                        <div class="image"> <img class="icon" src="images/orderlist.png"></div>
+                        <span class="span"> <a href="orderlist.html"> Sipariş Listesi </a> </span>
+                    </div>
+
+
+                </div>
+            </div>
+
+
+            <div class="second_grid">
+                <div id="headerimage">
+                    <img id="header_image" src="images/header_image.png" alt="Kitabevi" />
+                </div>
+            </div>
+
+
+            <div class="third_grid">
+                <div id="baslik2">
+                    <span>YÖNETİCİ PANELİ</span>
+                </div>
+                <div class="link">
+                    <div class="bolum">
+                        <div class="image"><img class="icon" src="images/todolist.jpeg"></div>
+                        <span class="span"> <a href="todolist.html"> Yapılacaklar </a> </span>
+                    </div>
+
+                    <div class="bolum">
+                        <div class="image"><img class="icon" src="images/sube.png"> </div>
+                        <span class="span"> <a href="sube.html">Şubeleri Göster</a> </span>
+                    </div>
+
+                    <div class="bolum">
+                        <div class="image"> <img class="icon" src="images/tedarikci.png"></div>
+                        <span class="span"> <a href="tedarik.html">Tedarikçileri Listele</a> </span>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div id="gecis">
+                <div class="gecis"> <img class="gecis" src="images/line.png"></div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="satir1">
+            <div class="chart1">
+                <div id="chartContainer1">
+                    <div id="chartContainer" style="height: 370px; width: 100%;"></div>
+                    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+                </div>
+
+            </div>
+
+            <div class="chart2">
+                <div id="chartContainer2">
+                    <div id="chartContainer" style="height: 370px; width: 100%;"></div>
+                    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+                </div>
+
+            </div>
+        </div>
+
+
+
+        <div class="satir2">
+            <div class="chart3">
+                <div id="chartContainer3">
+                    <div id="chartContainer" style="height: 370px; width: 100%;"></div>
+                    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+                </div>
+
+            </div>
+
+            <div class="chart4">
+                <div id="chartContainer4">
+                    <div id="chartContainer" style="height: 370px; width: 100%;"></div>
+                    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</div>
+</body>

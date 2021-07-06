@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <link href="style.css" rel="stylesheet">
+    <title>Parıltı Kitabevi</title>
+    <meta charset="UTF-8" />
+</head>
+<script>
+    //Javascript kodları
+</script>
+
+<body>
+    <div class="container">
+        <div class="row">
+
+            <div class="first_grid">
+                <div id="baslik1">
+                    <span> PARILTI KİTABEVİ  </span>
+                </div>
+                <div class="link">
+                    <div class="bolum">
+                        <div class="image"><img class="icon" src="images/home.png"></div>
+                        <span class="span"> <a href="index.html"> Anasayfa </a> </span>
+                    </div>
+                    <div class="bolum">
+                        <div class="image"><img class="icon" src="images/adminsymbol.png"> </div>
+                        <span class="span"> <a href="adminlist.html">    Kullanıcı Listesi </a> </span>
+                    </div>
+
+                    <div class="bolum">
+                        <div class="image"> <img class="icon" src="images/orderlist.png"></div>
+                        <span class="span"> <a href="orderlist.html"> Sipariş Listesi </a> </span>
+                    </div>
+
+
+                </div>
+            </div>
+
+
+            <div class="second_grid">
+                <div id="headerimage">
+                    <img id="header_image" src="images/header_image.png" alt="Kitabevi" />
+                </div>
+            </div>
+
+
+            <div class="third_grid">
+                <div id="baslik2">
+                    <span>YÖNETİCİ PANELİ</span>
+                </div>
+                <div class="link">
+                    <div class="bolum">
+                        <div class="image"><img class="icon" src="images/todolist.jpeg"></div>
+                        <span class="span"> <a href="todolist.html"> Yapılacaklar </a> </span>
+                    </div>
+
+                    <div class="bolum">
+                        <div class="image"><img class="icon" src="images/sube.png"> </div>
+                        <span class="span"> <a href="sube.html">Şubeleri Göster</a> </span>
+                    </div>
+
+
+
+                    <div class="bolum">
+                        <div class="image"> <img class="icon" src="images/tedarikci.png"></div>
+                        <span class="span"> <a href="tedarik.html">Tedarikçileri Listele</a> </span>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div id="gecis">
+                <div class="gecis"> <img class="gecis" src="images/line.png"></div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="content" id="orderlist">
+        <div id="add">
+            <span> Sipariş Ekle </span>
+
+            <div>
+                <form class="form">
+                    <div class="addorder">
+                        <label for=" username ">Kitap Adı</label><br>
+                        <input type="text " id="name "><br>
+                    </div>
+                    <div class="addorder">
+                        <label for="username ">Yazar</label><br>
+                        <input type="text " id="work "><br>
+                    </div>
+                    <div class="addorder">
+                        <label for="username ">ISBN</label><br>
+                        <input type="text " id="username "><br>
+                    </div>
+                    <div class="addorder">
+                        <label for="username ">Durumu</label><br>
+
+                        <select class="type">                        
+                            <option value="Teslim edildi.">Teslim edildi.</option>                            
+                            <option value="Teslim edilemedi.">Teslim edilemedi.</option>
+                            <option value="Sipariş alındı.">Sipariş alındı.</option>
+                            <option value="Dağıtımda.">Dağıtımda.</option>
+                            <option value="Bekleniyor...">Bekleniyor...</option>
+                            <option value="İstanbul şubesine ulaştırıldı.">İstanbul şubesine ulaştırıldı.</option>
+                            <option value="İzmir şubesine ulaştırıldı.">İzmir şubesine ulaştırıldı.</option>                            
+                            <option value="Ankara şubesine ulaştırıldı.">Ankara şubesine ulaştırıldı.</option>
+
+                        </select>
+
+                    </div>
+                    <div class="addorder">
+                        <label for="username ">Sipariş Veren Kişi</label><br>
+                        <input type="text " id="username "><br>
+                    </div>
+                    <div class="addorder">
+                        <label for="username ">GSM</label><br>
+                        <input type="text " id="username "><br>
+                    </div>
+                    <div class="addorder">
+                        <button type="button" onclick="alert('Sipariş kaydedildi.')">Sipariş kaydedildi.</button>
+                    </div>
+
+                </form>
+            </div>
+
+            <table class="table">
+                <tr>
+                    <th>Kitap Adı</th>
+                    <th>Yazar</th>
+                    <th>ISBN</th>
+                    <th>Durumu</th>
+                    <th>Sipariş Veren Kişi</th>
+                    <th>GSM</th>
+                </tr>
+                <tr>
+                    <td>Körlük</td>
+                    <td>Jose Saramago</td>
+                    <td> 9786052980811</td>
+                    <td>Teslim edildi.</td>
+                    <td> Anıl Çöz</td>
+                    <td> 05xxxxxx</td>
+                </tr>
+                <tr>
+                    <td>The Little Prince (İngilizce-Türkçe Sözlüklü Küçük Prens)</td>
+                    <td>Antoine De Saint Exupery</td>
+                    <td>9786057860491</td>
+                    <td>Tedarikçiden alındı, kargoya verilecek.
+                    </td>
+                    <td>Beyza Çevik</td>
+                    <td> 05xxxxxx</td>
+                </tr>
+                <tr>
+                    <td>Notes from the Underground</td>
+                    <td>Fyodor Mihailoviç Dostoyevski</td>
+                    <td> 9786059681032</td>
+                    <td>Bekleniyor...</td>
+                    <td> Melisa Deniz</td>
+                    <td> 05xxxxxx</td>
+                </tr>
+                <tr>
+                    <td>2021 KPSS Genel Yetenek, Çözümlü 10 Deneme</td>
+                    <td>Kollektif</td>
+                    <td>9780202001012</td>
+                    <td>Sipariş alındı.</td>
+                    <td> Turan Boz</td>
+                    <td> 05xxxxxx</td>
+                </tr>
+                <tr>
+                    <td>2021 KPSS Eğitim Bilimleri, Çözümlü 5 Deneme</td>
+                    <td>Kollektif </td>
+                    <td>9786052896594</td>
+                    <td>Dağıtımda.</td>
+                    <td> Beniz Halıcı</td>
+                    <td> 05xxxxxx</td>
+                </tr>
+                <tr>
+                    <td>Yakın Tarihin Gerçekleri</td>
+                    <td>Prof. Dr. İlber Ortaylı</td>
+                    <td>9786057635983</td>
+                    <td>Sipariş alındı.</td>
+                    <td> Gönül Hekimoğlu</td>
+                    <td> 05xxxxxx</td>
+                </tr>
+                <tr>
+                    <td>1984</td>
+                    <td>George Orwell </td>
+                    <td> 9789750718533</td>
+                    <td>Teslim edildi.</td>
+                    <td> Nilin Börekçi</td>
+                    <td> 05xxxxxx</td>
+                </tr>
+                <tr>
+                    <td>Gazi Mustafa Kemal Atatürk</td>
+                    <td>Prof. Dr. İlber Ortaylı </td>
+                    <td> 9789752430297
+                    </td>
+                    <td>Teslim edildi.</td>
+                    <td> Altuğ Kaya</td>
+                    <td> 05xxxxxx</td>
+                </tr>
+                <tr>
+                    <td>Var Mısın? Güçlü Bir Yaşam İçin Öneriler</td>
+                    <td>Doğan Cüceloğlu </td>
+                    <td> 9786057635839</td>
+                    <td>Teslim edilemedi.</td>
+                    <td> Nermin Saka</td>
+                    <td> 05xxxxxx</td>
+                </tr>
+                <tr>
+                    <td>Vitaminli Ekonomiks</td>
+                    <td>Asaf Savaş Akat, Ege Cansen</td>
+                    <td> 9789751420077</td>
+                    <td>Teslim edildi.</td>
+                    <td> Selin Çevik</td>
+                    <td> 05xxxxxx</td>
+                </tr>
+                <tr>
+                    <td>Diriliş Neslinin Amentüsü</td>
+                    <td>Sezai Karakoç </td>
+                    <td> 9789123494293
+                    </td>
+                    <td>Ankara şubesine ulaştırıldı.</td>
+                    <td> Uzay Bör</td>
+                    <td> 05xxxxxx</td>
+                </tr>
+                <tr>
+                    <td>Kayıp Tanrılar Ülkesi</td>
+                    <td>Ahmet Ümit </td>
+                    <td> 9786056950483
+                    </td>
+                    <td>Bekleniyor...</td>
+                    <td> İzi Bosna</td>
+                    <td> 05xxxxxx</td>
+                </tr>
+                <tr>
+                    <td>İyi Hissetmek</td>
+                    <td>Dr. David Burns </td>
+                    <td> 9786052980811</td>
+                    <td>Tedarikçiden alındı kargoya verilecek. </td>
+                    <td> Berka Bozok</td>
+                    <td> 05xxxxxx</td>
+                </tr>
+                <tr>
+                    <td>Babil’in En Zengin Adamı</td>
+                    <td>George S. Clason </td>
+                    <td> 9786059397520
+                    </td>
+                    <td>Teslim edildi.</td>
+                    <td> Beyza Çevik</td>
+                    <td> 05xxxxxx</td>
+                </tr>
+                <tr>
+                    <td>Sarayda Bir Yıl</td>
+                    <td>Rana Demiriz </td>
+                    <td> 9786050832785</td>
+                    <td>Bekleniyor...</td>
+                    <td> Nil Kara</td>
+                    <td> 05xxxxxx</td>
+                </tr>
+                <tr>
+                    <td>Dünyayı Sırtında Taşıyan Balıkk</td>
+                    <td>Özgür Balpınar </td>
+                    <td> 9786050834697
+                    </td>
+                    <td>Teslim edilemedi.</td>
+                    <td> Ayhan Çiçer</td>
+                    <td> 05xxxxxx</td>
+                </tr>
+                <tr>
+                    <td>Kelebek Zihinli Çocuk</td>
+                    <td>Victoria Williamson </td>
+                    <td> 9786050837933
+                    </td>
+                    <td>Teslim edildi.</td>
+                    <td> Alp Hekimoğlu</td>
+                    <td> 05xxxxxx</td>
+                </tr>
+
+            </table>
+        </div>
+
+
+</body>
+
+</div>
+</body>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <link href="style.css" rel="stylesheet">
+    <title>Parıltı Kitabevi</title>
+    <meta charset="UTF-8" />
+</head>
+<script>
+    //Javascript kodları
+</script>
+
+<body>
+    <div class="container">
+        <div class="row">
+
+            <div class="first_grid">
+                <div id="baslik1">
+                    <span> PARILTI KİTABEVİ  </span>
+                </div>
+                <div class="link">
+                    <div class="bolum">
+                        <div class="image"><img class="icon" src="images/home.png"></div>
+                        <span class="span"> <a href="index.html"> Anasayfa </a> </span>
+                    </div>
+                    <div class="bolum">
+                        <div class="image"><img class="icon" src="images/adminsymbol.png"> </div>
+                        <span class="span"> <a href="adminlist.html">    Kullanıcı Listesi </a> </span>
+                    </div>
+
+                    <div class="bolum">
+                        <div class="image"> <img class="icon" src="images/orderlist.png"></div>
+                        <span class="span"> <a href="orderlist.html"> Sipariş Listesi </a> </span>
+                    </div>
+
+
+                </div>
+            </div>
+
+
+            <div class="second_grid">
+                <div id="headerimage">
+                    <img id="header_image" src="images/header_image.png" alt="Kitabevi" />
+                </div>
+            </div>
+
+
+            <div class="third_grid">
+                <div id="baslik2">
+                    <span>YÖNETİCİ PANELİ</span>
+                </div>
+                <div class="link">
+                    <div class="bolum">
+                        <div class="image"><img class="icon" src="images/todolist.jpeg"></div>
+                        <span class="span"> <a href="todolist.html"> Yapılacaklar </a> </span>
+                    </div>
+
+                    <div class="bolum">
+                        <div class="image"><img class="icon" src="images/sube.png"> </div>
+                        <span class="span"> <a href="sube.html">Şubeleri Göster</a> </span>
+                    </div>
+
+                    <div class="bolum">
+                        <div class="image"> <img class="icon" src="images/tedarikci.png"></div>
+                        <span class="span"> <a href="tedarik.html">Tedarikçileri Listele</a> </span>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div id="gecis">
+                <div class="gecis"> <img class="gecis" src="images/line.png"></div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="content" id="adminlist">
+        <div id="add">
+            <span> Kullanıcı Ekle </span>
+
+            <div>
+                <form class="form">
+                    <div class="newadmin">
+                        <label for=" username ">Adı Soyadı</label><br>
+                        <input type="text " id="name "><br>
+                    </div>
+                    <div class="newadmin">
+                        <label for="username ">Görevi</label><br>
+                        <input type="text " id="work "><br>
+                    </div>
+                    <div class="newadmin">
+                        <label for="username ">Kullanıcı Adı</label><br>
+                        <input type="text " id="username "><br>
+                    </div>
+                    <div class="newadmin">
+                        <label for="pwd ">Parola</label><br>
+                        <input type="password " id="pwd " name="pwd ">
+                    </div>
+                    <div class="newadmin">
+                        <input type="submit " value="Kaydet ">
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+        <table class="table">
+            <tr>
+                <th>Kullanıcı</th>
+                <th>Görevi</th>
+                <th>Kullanıcı Adı</th>
+                <th>Şifresi</th>
+            </tr>
+            <tr>
+                <td>Mehmet Kurt</td>
+                <td>CEO</td>
+                <td>m.kurt</td>
+                <td> ****** </td>
+            </tr>
+            <tr>
+                <td>Işık Kara</td>
+                <td>Müdür</td>
+                <td>isikkara</td>
+                <td>************</td>
+            </tr>
+            <tr>
+                <td>Defne Boz</td>
+                <td>Müdür Yardımcısı</td>
+                <td>defboz</td>
+                <td>**********</td>
+            </tr>
+            <tr>
+                <td>Yasin Kara</td>
+                <td>Ülke İçi Tedarik Sorumlusu</td>
+                <td>yasinkara</td>
+                <td>****</td>
+            </tr>
+            <tr>
+                <td>Gökhan Yurt</td>
+                <td>İstanbul Şube İl Sorumlusu</td>
+                <td>gokhanyurt</td>
+                <td>***</td>
+            </tr>
+            <tr>
+                <td>Beliz Yıldız</td>
+                <td>Ankara Şube İl Sorumlusu</td>
+                <td>beliz.yildiz</td>
+                <td>*****</td>
+            </tr>
+            <tr>
+                <td>Turgut Yılmaz</td>
+                <td>İzmir Şube İl Sorumlusu</td>
+                <td>turgut.yilmz</td>
+                <td>********</td>
+            </tr>
+            <tr>
+                <td>Ayten Bulut</td>
+                <td>Tedarik Sorumlusu</td>
+                <td>ayten.bulutt</td>
+                <td>*************</td>
+            </tr>
+        </table>
+
+    </div>
+
+</body>
