@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <link href="style.css" rel="stylesheet">
+    <title>ÇEŞME SAKA SİTESİ</title>
+    <meta charset="UTF-8" />
+</head>
+
+<script>
+    window.onload = function() {
+
+        var chart = new CanvasJS.Chart("chartContainer1", {
+            animationEnabled: true,
+            title: {
+                text: "Sitenin Yıllık Gider Bölümlemesi"
+            },
+            data: [{
+                type: "pie",
+                startAngle: 240,
+                yValueFormatString: "##0.00\"%\"",
+                indexLabel: "{label} {y}",
+                dataPoints: [{
+                    y: 39.45,
+                    label: "Su"
+                }, {
+                    y: 29.31,
+                    label: "Elektrik"
+                }, {
+                    y: 17.06,
+                    label: "Gaz"
+                }]
+            }]
+        });
+        chart.render();
+
+        var chart = new CanvasJS.Chart("chartContainer2", {
+            title: {
+                text: "Sitenin Ağaç Bakımna Harcadığı Miktar"
+            },
+            axisY: {
+                title: "CO2 Dapılımı",
+                lineColor: "#4F81BC",
+                tickColor: "#4F81BC",
+                labelFontColor: "#4F81BC"
+            },
+            axisY2: {
+                title: "O2 Dğılımı",
+                suffix: "%",
+                lineColor: "#C0504E",
+                tickColor: "#C0504E",
+                labelFontColor: "#C0504E"
+            },
+            data: [{
+                type: "column",
+                dataPoints: [{
+                    label: "Bölge 1",
+                    y: 44853
+                }, {
+                    label: "Bölge 2",
+                    y: 36525
+                }, {
+                    label: "Bölge 3",
+                    y: 23768
+                }]
+            }]
+        });
+        chart.render();
+        createPareto();
+
+        function createPareto() {
+            var dps = [];
+            var yValue, yTotal = 0,
+                yPercent = 0;
+
+            for (var i = 0; i < chart.data[0].dataPoints.length; i++)
+                yTotal += chart.data[0].dataPoints[i].y;
+
+            for (var i = 0; i < chart.data[0].dataPoints.length; i++) {
+                yValue = chart.data[0].dataPoints[i].y;
+                yPercent += (yValue / yTotal * 100);
+                dps.push({
+                    label: chart.data[0].dataPoints[i].label,
+                    y: yPercent
+                });
+            }
+
+            chart.addTo("data", {
+                type: "line",
+                yValueFormatString: "0.##\"%\"",
+                dataPoints: dps
+            });
+            chart.data[1].set("axisYType", "secondary", false);
+            chart.axisY[0].set("maximum", yTotal);
+            chart.axisY2[0].set("maximum", 100);
+        }
+
+
+    }
+</script>
+
+<body>
+    <div class="gecis"></div>
+
+    <div class="baslik">
+        <div class="logo1"><img src="images/logo.png" alt="ceşme"></div>
+        <div class="yazi">
+            <h1>ÇEŞME SAKA YAZLIKEVLERİ SİTESİ</h1>
+            <P>Yönetim Paneli</P>
+        </div>
+        <div class="logo2"><img src="images/logo.png" alt="ceşme"></div>
+
+    </div>
+
+    <div class="gecis"></div>
+
+
+    <div id="page ">
+        <main class="container">
+            <div class="banner">
+                <div class="menu ">
+                    <span class="span "> <a href="index.html ">Anasayfa</a></span>
+                </div>
+                <div class="menu ">
+                    <span class="span "> <a href="aylikozet.html">Gelir</a></span>
+                </div>
+                <div class="menu ">
+                    <span class="span "><a href="calisanlar.html">Çalışan Listesi</a></span>
+                </div>
+
+            </div>
+        </main>
+
+        <div class="content ">
+            <div class="grafik1">
+                <div id="chartContainer1" style="height: 370px; width: 100%;"></div>
+                <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+            </div>
+            <div class="grafik2">
+                <div id="chartContainer2" style="height: 370px; width: 100%;"></div>
+                <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+
+            </div>
+
+        </div>
+    </div>
+</body>

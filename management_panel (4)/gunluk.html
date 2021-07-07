@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="utf-8" />
+    <title>MAVİBAHÇE YÖNETİM PANELİ
+    </title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<script>
+    window.onload = function() {
+
+        var chart = new CanvasJS.Chart("chartContainer", {
+            title: {
+                text: "Anlık AVM'deki Kişi Sayısı"
+            },
+            axisY: {
+                title: "Kişi Sayısı",
+                includeZero: true,
+                suffix: " "
+            },
+            data: [{
+                type: "column",
+                yValueFormatString: "#,### ",
+                indexLabel: "{y}",
+                dataPoints: [{
+                    label: "giris1",
+                    y: 206
+                }, {
+                    label: "giris2",
+                    y: 163
+                }, {
+                    label: "giris3",
+                    y: 154
+                }, {
+                    label: "giris4",
+                    y: 176
+                }, {
+                    label: "giris5",
+                    y: 184
+                }, {
+                    label: "giris6",
+                    y: 122
+                }]
+            }]
+        });
+
+        function updateChart() {
+            var boilerColor, deltaY, yVal;
+            var dps = chart.options.data[0].dataPoints;
+            for (var i = 0; i < dps.length; i++) {
+                deltaY = Math.round(2 + Math.random() * (-2 - 2));
+                yVal = deltaY + dps[i].y > 0 ? dps[i].y + deltaY : 0;
+                boilerColor = yVal > 200 ? "#FF2500" : yVal >= 170 ? "#FF6000" : yVal < 170 ? "#6B8E23 " : null;
+                dps[i] = {
+                    label: "Giriş " + (i + 1),
+                    y: yVal,
+                    color: boilerColor
+                };
+            }
+            chart.options.data[0].dataPoints = dps;
+            chart.render();
+        };
+        updateChart();
+
+        setInterval(function() {
+            updateChart()
+        }, 500);
+
+    }
+</script>
+
+<body>
+    <header>
+        <img id="header_image" src="images/foto.png" alt="" />
+    </header>
+    <main class="container">
+        <div class="banner">
+
+            <div id="bannerr">
+                <h1 style="margin-top: 0px ">MAVİBAHÇE AVM YÖNETİM PANELİ</h1>
+                <div class="link ">
+                    <div class="bolum ">
+                        <span class="span "> <a href="index.html "> Anasayfa </a> </span>
+                    </div>
+
+                    <div class="bolum ">
+                        <span class="span "> <a href="magazalist.html "> Mağaza Listesi </a> </span>
+                    </div>
+
+                    <div class="bolum ">
+                        <span class="span "> <a href="gunluk.html "> Günlük Kişi Sayısı </a> </span>
+                    </div>
+
+                    <div class="bolum ">
+                        <span class="span "> <a href="adminlist.html "> Admin Listesi </a> </span>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+        <h2 class=" ">Dinamik grafik</h2>
+        <div class="grafik">
+            <div id="chartContainer" style="height: 370px; width: 100;"></div>
+            <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+        </div>
+
+
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,250 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.gecis {
+    width: 100%;
+    background-color: #3c53b8;
+    height: 8px;
+}
+
+.banner {
+    display: inline-flex;
+    background-color: #8e85e4;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner span {
+    padding: 20px;
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.baslik {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(194, 248, 255);
+    flex-wrap: nowrap
+}
+
+.baslik .yazi {
+    background-color: rgb(194, 248, 255);
+    height: 90px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.baslik .yazi h1 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-top: 8px;
+    margin: 15px;
+    font-size: 35px;
+}
+
+.baslik .yazi p {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.baslik img {
+    height: 60px;
+    width: 60px;
+}
+
+.baslik .logo {
+    display: block;
+}
+
+.baslik .logo1 {
+    display: block;
+    margin-left: 75px;
+}
+
+.baslik .logo2 {
+    display: block;
+    margin-right: 75px;
+}
+
+a {
+    color: aquamarine;
+}
+
+.content {
+    pad: 25px;
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    margin: 30px auto;
+    padding: 2em;
+    border-radius: 1.6em;
+    box-shadow: -5px -5px 20px black;
+}
+
+.grafik1 {
+    width: 675px;
+    height: auto;
+    margin-right: 25px;
+}
+
+.grafik2 {
+    width: 375px;
+    height: auto;
+    margin-left: 25px;
+}
+
+.tablo {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-left: -40px;
+}
+
+th {
+    padding: 5px;
+}
+
+td {
+    padding: 5px;
+}

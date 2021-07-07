@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <link href="style.css" rel="stylesheet">
+    <title>KARŞIYAKA ÖĞRETMENEVİ</title>
+    <meta charset="UTF-8" />
+</head>
+
+<script>
+    window.onload = function() {
+        var chart = new CanvasJS.Chart("chartContainer", {
+            animationEnabled: true,
+            zoomEnabled: true,
+            theme: "light2",
+            title: {
+                text: "Üyelerin Yaş Dağılımı"
+            },
+            axisX: {
+                title: "Employment - Agricultur",
+                suffix: "",
+                minimum: 0,
+                maximum: 61,
+                gridThickness: 1
+            },
+            axisY: {
+                title: "",
+                suffix: ""
+            },
+            data: [{
+                type: "bubble",
+                toolTipContent: "<b>{name}</b><br/>Employment: {x}% <br/> Agri-Land: {y}mn sq. km<br/> Population: {z}mn",
+                dataPoints: [{
+                    x: 39.6,
+                    y: 5.225,
+                    z: 1347,
+                    name: ""
+                }, {
+                    x: 3.3,
+                    y: 4.17,
+                    z: 21.49,
+                    name: ""
+                }, {
+                    x: 1.5,
+                    y: 4.043,
+                    z: 304.09,
+                    name: ""
+                }, {
+                    x: 17.4,
+                    y: 2.647,
+                    z: 2.64,
+                    name: ""
+                }, {
+                    x: 8.6,
+                    y: 2.154,
+                    z: 141.95,
+                    name: ""
+                }, {
+                    x: 52.98,
+                    y: 1.797,
+                    z: 1190.86,
+                    name: ""
+                }, {
+                    x: 4.3,
+                    y: 1.735,
+                    z: 26.16,
+                    name: ""
+                }, {
+                    x: 1.21,
+                    y: 1.41,
+                    z: 39.71,
+                    name: ""
+                }, {
+                    x: 5.7,
+                    y: .993,
+                    z: 48.79,
+                    name: ""
+                }, {
+                    x: 13.1,
+                    y: 1.02,
+                    z: 110.42,
+                    name: ""
+                }, {
+                    x: 2.4,
+                    y: .676,
+                    z: 33.31,
+                    name: ""
+                }, {
+                    x: 2.8,
+                    y: .293,
+                    z: 64.37,
+                    name: ""
+                }, {
+                    x: 3.8,
+                    y: .46,
+                    z: 127.70,
+                    name: ""
+                }, {
+                    x: 40.3,
+                    y: .52,
+                    z: 234.95,
+                    name: ""
+                }]
+            }]
+        });
+        chart.render();
+
+    }
+</script>
+
+<body>
+    <div id="page">
+
+
+        <div class="container">
+            <div class="dikeymenu">
+                <img src="images/logo.png" id="logo">
+
+
+                <div class="menu">
+                    <img class="icon" src="images/icon.png">
+                    <span class="span"> <a href="index.html">Anasayfa</a></span>
+                </div>
+                <div class="menu">
+                    <img class="icon" src="images/icon.png">
+                    <span class="span"><a href="girisyap.html">Kullanıcı Girişi </a></span>
+                </div>
+                <div class="menu">
+                    <img class="icon" src="images/icon.png">
+                    <span class="span"> <a href="uyelist.html">Üye Listesi</a></span>
+                </div>
+                <div class="menu">
+                    <img class="icon" src="images/icon.png">
+                    <span class="span"> <a href="programlist.html">Program Listesi</a></span>
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+        <div class="row">
+
+            <div class="yataymenu">
+                <span> KARŞIYAKA ÖĞRETMENEVLERİ YÖNETİM PANELİ</span>
+                <div id="bannerright">
+                    <button>Çıkış Yap</button>
+                </div>
+            </div>
+
+
+            <div class="content">
+                <div id="chartContainer" style="height: 370px; width: 70%;"></div>
+                <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+            </div>
+
+        </div>
+    </div>
+
+
+
+</body>
+
+</div>
+</body>
+
+</div>
+</body>

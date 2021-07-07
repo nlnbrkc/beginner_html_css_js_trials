@@ -1,0 +1,83 @@
+    @import url('https://fonts.googleapis.com/css2?family=Texturina&display=swap');
+    body {
+        margin: 0;
+        background-color: rgba(255, 100, 100, 0.5);
+        font-family: sans-serif;
+        color: #1e272e;
+    }
+    
+    h1,
+    h2,
+    h3 {
+        font-family: 'Texturina', serif;
+        color: brown;
+    }
+    
+    #header_image {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        object-position: inherit;
+    }
+    
+    .container {
+        width: 80%;
+        margin: 30px auto;
+        padding: 2em;
+        border-radius: 1.6em;
+        box-shadow: -5px -5px 20px black;
+    }
+    
+    .container .link {
+        display: flex;
+        margin-left: 50px;
+        margin-top: 15px;
+    }
+    
+    .container .link span {
+        margin: 5px;
+        margin-left: 10px;
+        font-size: 20px;
+    }
+    
+    #bannerr {
+        display: flex;
+    }
+    
+    a {
+        color: black;
+    }
+    
+    .chartone {
+        width: 675px;
+        height: auto;
+        margin-right: 25px;
+    }
+    
+    .charttwo {
+        width: 375px;
+        height: auto;
+        margin-left: 25px;
+    }
+    
+    .charts {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .tablo {
+        justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .list {
+        justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }

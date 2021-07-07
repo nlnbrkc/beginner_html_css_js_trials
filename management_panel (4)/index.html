@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="utf-8" />
+    <title>MAVİBAHÇE YÖNETİM PANELİ
+    </title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<script>
+    window.onload = function() {
+
+        var chart = new CanvasJS.Chart("chartContainer1", {
+            animationEnabled: true,
+            title: {
+                text: "Aylara Göre AVM'de Bulunan Kişi Sayısı"
+            },
+            axisX: {
+                title: "Time"
+            },
+            axisY: {
+                title: "Doluluk Oranı",
+                suffix: "%",
+                includeZero: true
+            },
+            data: [{
+                type: "line",
+                name: "CPU Utilization",
+                connectNullData: true,
+                //nullDataLineDashType: "solid",
+                xValueType: "dateTime",
+                xValueFormatString: "DD MMM hh:mm TT",
+                yValueFormatString: "#,##0.##\"%\"",
+                dataPoints: [{
+                        x: 1501048673000,
+                        y: 35.939
+                    }, {
+                        x: 1501052273000,
+                        y: 40.896
+                    }, {
+                        x: 1501055873000,
+                        y: 56.625
+                    }, {
+                        x: 1501059473000,
+                        y: 26.003
+                    }, {
+                        x: 1501063073000,
+                        y: 20.376
+                    }, {
+                        x: 1501066673000,
+                        y: 19.774
+                    }, {
+                        x: 1501070273000,
+                        y: 23.508
+                    }, {
+                        x: 1501073873000,
+                        y: 18.577
+                    }, {
+                        x: 1501077473000,
+                        y: 15.918
+                    }, {
+                        x: 1501081073000,
+                        y: null
+                    }, // Null Data
+                    {
+                        x: 1501084673000,
+                        y: 10.314
+                    }, {
+                        x: 1501088273000,
+                        y: 10.574
+                    }, {
+                        x: 1501091873000,
+                        y: 14.422
+                    }, {
+                        x: 1501095473000,
+                        y: 18.576
+                    }, {
+                        x: 1501099073000,
+                        y: 22.342
+                    }, {
+                        x: 1501102673000,
+                        y: 22.836
+                    }, {
+                        x: 1501106273000,
+                        y: 23.220
+                    }, {
+                        x: 1501109873000,
+                        y: 23.594
+                    }, {
+                        x: 1501113473000,
+                        y: 24.596
+                    }, {
+                        x: 1501117073000,
+                        y: 31.947
+                    }, {
+                        x: 1501120673000,
+                        y: 31.142
+                    }
+                ]
+            }]
+        });
+        chart.render();
+
+        var chart = new CanvasJS.Chart("chartContainer2", {
+            animationEnabled: true,
+            theme: "light2", // "light1", "light2", "dark1", "dark2"
+            title: {
+                text: "Çeşitli Ülkelerde Gelen Ziyaretçi Dağılımı"
+            },
+            axisY: {
+                title: "Yoğunluk"
+            },
+            data: [{
+                type: "column",
+                showInLegend: true,
+                legendMarkerColor: "grey",
+                legendText: "Ülkeler",
+                dataPoints: [{
+                    y: 30878,
+                    label: "Venezuela"
+                }, {
+                    y: 26645,
+                    label: "Saudi"
+                }, {
+                    y: 16909,
+                    label: "Canada"
+                }, {
+                    y: 15580,
+                    label: "Iran"
+                }, {
+                    y: 14623,
+                    label: "Iraq"
+                }, {
+                    y: 10500,
+                    label: "Kuwait"
+                }, {
+                    y: 9700,
+                    label: "UAE"
+                }, {
+                    y: 8057,
+                    label: "Russia"
+                }]
+            }]
+        });
+        chart.render();
+
+    }
+</script>
+
+<body>
+    <header>
+        <img id="header_image" src="images/foto.png" alt="" />
+    </header>
+    <main class="container">
+        <div class="banner">
+
+            <div id="bannerr">
+                <h1 style="margin-top: 0px ">MAVİBAHÇE AVM YÖNETİM PANELİ</h1>
+                <div class="link ">
+                    <div class="bolum ">
+                        <span class="span "> <a href="index.html "> Anasayfa </a> </span>
+                    </div>
+
+                    <div class="bolum ">
+                        <span class="span "> <a href="magazalist.html "> Mağaza Listesi </a> </span>
+                    </div>
+
+                    <div class="bolum ">
+                        <span class="span "> <a href="gunluk.html "> Günlük Kişi Sayısı </a> </span>
+                    </div>
+
+                    <div class="bolum ">
+                        <span class="span "> <a href="adminlist.html "> Admin Listesi </a> </span>
+                    </div>
+                </div>
+
+            </div>
+
+            <p class=" ">
+                Bu bölümde alışveriş merkezine ait verileri bulunduran grafikleri görebileceksiniz.
+
+            </p>
+
+        </div>
+        <h2 class=" ">Analizler</h2>
+
+        <div class="charts">
+            <div class="chartone">
+                <div id="chartContainer1" style="height: 370px; width: 100%;"></div>
+                <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+            </div>
+            <br>
+            <br>
+
+            <div class="charttwo">
+                <div id="chartContainer2" style="height: 370px; width: 100%;"></div>
+                <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
